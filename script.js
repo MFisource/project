@@ -1,7 +1,7 @@
 'use strict';
  
 
-const numberOfFilms = +prompt('how much do you watch films?', '');
+const numberOfFilms = prompt('how much do you watch films?', '');
     
 const personalMovieDB = {
 	count: numberOfFilms,
@@ -15,12 +15,34 @@ const personalMovieDB = {
 	privat: false
 }; 
 
-const a = prompt ('what last film do you watch?', ''),
-	b = +prompt ('what score do you give?', ''),
-	c = prompt ('what last film do you watch?', ''),
-	d = +prompt ('what score do you give?', '');
 
-personalMovieDB.movies [a] = b;
-personalMovieDB.movies [c] = d;
+	
+for (let i = 0; i < 2; i++) {
+	
 
+	const a = prompt ('what last film do you watch?', ''),
+		b = +prompt ('what score do you give?', '');
+
+	if ( a != null && b != null && a.length < 50 && a != '' && b != '' ) {
+		personalMovieDB.movies [a] = b;
+	} else {
+		i--;
+	}
+
+}
+
+if (personalMovieDB.count < 10) {
+	alert ('few movies have been viewed');
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count <=30) {
+	alert ('you are a movie fan');
+} else if (personalMovieDB.count > 30) {
+	alert ('you are super fan');
+} else {
+	alert ('error');
+}
+	
+
+
+
+		
 console.log(personalMovieDB);

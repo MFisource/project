@@ -134,30 +134,70 @@
 // } 
 // console.log(thirdTask());
 
-const lines = 5;
-let result = '';
+// const lines = 5;
+// let result = '';
 
-for (let i = 0; i < lines; i++) {
+// for (let i = 0; i < lines; i++) {
     
-	for (let j = 0; j < lines - i; j++ ) {
-		result += ' ';
+// 	for (let j = 0; j < lines - i; j++ ) {
+// 		result += ' ';
         
-	}
+// 	}
 	
-	for (let j = 0;  j < 2 * i + 1 ; j++) {
-		result += '*';
-	}
-	result += '\n';
-} console.log(result);
+// 	for (let j = 0;  j < 2 * i + 1 ; j++) {
+// 		result += '*';
+// 	}
+// 	result += '\n';
+// } console.log(result);
 
-for (let i = 0; i <= lines; i++) {
-	for (let j = 0; j < lines - i; j++) {
-		result += ' ';
-	}
-	for (let j = 0; j < 2 * i + 1; j++) {
-		result += '*';
-	}
-	result += '\n';
-}
+// for (let i = 0; i <= lines; i++) {
+// 	for (let j = 0; j < lines - i; j++) {
+// 		result += ' ';
+// 	}
+// 	for (let j = 0; j < 2 * i + 1; j++) {
+// 		result += '*';
+// 	}
+// 	result += '\n';
+// }
 
-console.log(result);
+// console.log(result);
+
+// function sayHello(nameUser) {
+// 	return 'hello ' + nameUser;
+
+// }
+
+// console.log(sayHello('Anton'));
+
+// function returnNeighboringNumbers(i) {
+	
+// 	return [--i, ++i, ++i];
+// }
+
+// console.log(returnNeighboringNumbers([5]));
+
+function getMathResult(basa, icr) {
+	if (typeof(icr) !== 'number' || icr <= 0) {
+		return basa;
+	}
+
+	let str = '';
+
+	for (let i = 1; i <= icr; i++) {
+		if (i === icr) {
+			str += `${basa * i}`;
+
+		} else {
+			str += `${basa * i}---`;
+		}
+	}
+
+	return str;
+} 
+
+console.log(getMathResult(5, 3));
+
+
+
+
+
